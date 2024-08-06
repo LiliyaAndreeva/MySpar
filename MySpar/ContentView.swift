@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+	@StateObject private var viewModel = GridListViewModel()
+	
     var body: some View {
-       GridItem()
-    }
+		
+				VStack {
+
+					GridView(viewModel: viewModel)
+							
+					
+				}
+			}
+
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

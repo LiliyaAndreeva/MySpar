@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct RectagleButton: View {
+struct RectagleWithTwoIcons: View {
 	let width: CGFloat
 	let height: CGFloat
-	@Binding var isHeartFilled: Bool
 	
+
 	var body: some View {
 
 		ZStack{
@@ -21,24 +21,25 @@ struct RectagleButton: View {
 				.opacity(0.4)
 				.cornerRadius(16)
 			VStack{
-				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+				
 					Image(ConstantStrings.Icons.checkIcon)
 						.resizable()
 						.scaledToFit()
 						.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-				})
-				Button(action: {
-					isHeartFilled.toggle()
-				}, label: {
+			
+
+
 					Image(ConstantStrings.Icons.heardIcon)
 						.resizable()
 						.scaledToFit()
 						.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-						.foregroundColor(isHeartFilled ? Color.green : Color.black)
-				})
 
 
 			}
 		}
 	}
+}
+
+#Preview {
+	RectagleWithTwoIcons(width: 16, height: 16)
 }

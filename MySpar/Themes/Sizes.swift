@@ -16,5 +16,6 @@ enum Sizes {
 
 	enum iconSizes{
 		static let size: CGFloat = 24
+		static let iconSize: CGFloat = 16
 	}
 }

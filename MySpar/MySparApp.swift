@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MySparApp: App {
+	@StateObject private var gridModel = GridListViewModel()
+
+	
+	//let model: GridItemModel = ModelMager().fetchCell().first
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			ContentView()
+				.environmentObject(gridModel)
         }
     }
 }
