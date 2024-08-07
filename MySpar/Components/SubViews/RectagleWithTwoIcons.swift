@@ -8,38 +8,34 @@
 import SwiftUI
 
 struct RectagleWithTwoIcons: View {
-	let width: CGFloat
-	let height: CGFloat
-	
+//	let width: CGFloat
+//	let height: CGFloat
+//	
 
 	var body: some View {
 
 		ZStack{
-			Rectangle()
-				.frame(width: width, height: height)
-				.foregroundColor(.white)
-				.opacity(0.4)
-				.cornerRadius(16)
-			VStack{
-				
+
+			VStack(spacing: 0){
+				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
 					Image(ConstantStrings.Icons.checkIcon)
 						.resizable()
 						.scaledToFit()
 						.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-			
-
-
+				})
+				.frame(width: 32, height: 32)
+				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
 					Image(ConstantStrings.Icons.heardIcon)
 						.resizable()
 						.scaledToFit()
 						.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-
-
+				})
+				.frame(width: 32, height: 32)
 			}
 		}
 	}
 }
 
 #Preview {
-	RectagleWithTwoIcons(width: 16, height: 16)
+	RectagleWithTwoIcons()
 }

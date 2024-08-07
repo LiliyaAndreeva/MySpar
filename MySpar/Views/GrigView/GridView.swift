@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct GridView: View {
+	
 	@StateObject var viewModel: GridListViewModel
+	
+	init(itemManager: ItemManager = ItemManager()) {
+		_viewModel = StateObject(wrappedValue: GridListViewModel(itemManager: itemManager))
+	}
 	
 	private let columns = Array(
 		repeating: GridItem(.flexible()),
@@ -28,6 +33,6 @@ struct GridView: View {
 }
 
 #Preview {
-	GridView(viewModel: GridListViewModel())
+	GridView()
 			
 }

@@ -21,30 +21,25 @@ struct ConstantStrings {
 		static let flag2 = "BadgeTempXS2"
 		static let flag3 = "BadgeTempXS3"
 		static let franceFlag = "franceFlag"
-		
-		static let pictureOne = "1"
-		static let pictureTwo = "2"
-		static let pictureThree = "3"
-		static let pictureFour = "4"
-		static let pictureFive = "5"
-		static let pictureSix = "6"
-		static let pictureSeven = "7"
-		static let pictureEight = "8"
-		static let pictureNine = "9"
-		static let pictureTen = "10"
-		static let pictureEleven = "11"
-		static let pictureTwelve = "12"
-		static let pictureThirteen = "13"
-		static let pictureFourteen = "14"
-		static let pictureFifteen = "15"
-		static let pictureSixteen = "16"
-		static let pictureSeventeen = "17"
-
-		
 	}
 	
+	enum ProductTitles {
+		static let cheeseLamber = "сыр Ламбер 500/0 230г"
+		static let energyDrink = "Энергетический Напит"
+		static let vegetableSalad = "Салат Овощной с Крабовыми Палочками"
+		static let dorado = "Дорадо Охлажденная Непотрошеная 300-400г"
+		static let rollJapan = "Ролл Маленькая Япония 216г"
+		static let cucumbers = "Огурцы тепличные cадово-огородные"
+		static let mangoKeo = "Манго Кео"
+		static let oilSloboda = "Масло Слобода Рафинированное 1,8л"
+		static let pasta = "Макаронные Изделия SPAR Спагетти 450г"
+		
+	}
+		
+
 	enum Text {
 		static let rangeText = "4.1"
+		static let fidback = " | 19 отзывов"
 	}
 	
 }

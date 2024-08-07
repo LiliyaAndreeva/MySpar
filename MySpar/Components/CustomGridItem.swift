@@ -49,10 +49,7 @@ struct CustomGridItem: View {
 										.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius))
 								}
 								Spacer()
-								RectagleWithTwoIcons(
-									width: sizeSmallRectangleWidth,
-									height: sizeSmallRectangleHeght
-								)
+								RectagleWithTwoIcons()
 							}
 							Spacer()
 							HStack{
@@ -100,39 +97,9 @@ struct CustomGridItem: View {
 	}
 }
 
-struct Range: View {
-	var body: some View{
-		HStack(spacing: 3) {
-			Image(ConstantStrings.Icons.star)
-			Text(ConstantStrings.Text.rangeText)
-		}
-		.frame(height: 20)
-	}
-}
 
-struct DiscontLabel: View {
-	let text: String
-	var body: some View {
-		Text(text)
-			.foregroundStyle(.red)
-			.font(.system(size: 16))
-			.fontWeight(.semibold)
-	}
-}
-struct FlagLabel: View {
-	let text: String
-	var body: some View {
-		HStack{
-			Text(text)
-				.foregroundStyle(.gray)
-				.font(.system(size: 9))
-			
-			Image(ConstantStrings.Pictures.franceFlag)
-				.resizable()
-				.frame(width: Sizes.iconSizes.iconSize,height: Sizes.iconSizes.iconSize)
-		}
-	}
-}
+
+
 
 #Preview {
 	CustomGridItem(model: ItemManager().fetchCell().first!)
