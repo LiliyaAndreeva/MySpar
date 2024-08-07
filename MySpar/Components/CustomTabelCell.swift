@@ -16,10 +16,6 @@ struct CustomTabelCell: View {
 	
 	var body: some View {
 		let sizeWidth = 144 * multipleWidth
-		//let sizeHeight = 278 * multipleHeigth
-		let sizeSmallRectangleHeght = 64 * multipleHeigth
-		let sizeSmallRectangleWidth = 32 * multipleHeigth
-
 		HStack {
 					VStack {
 						ZStack {
@@ -37,14 +33,17 @@ struct CustomTabelCell: View {
 									Spacer()
 								}
 								Spacer()
-								HStack{
+								HStack(){
+									//Text("")
 									Spacer()
 									DiscontLabel(text: model.discountLabel)
+										//.frame(maxWidth: .infinity, alignment: .trailing)
 								}
+							
 							}
 						}
 					}
-					.frame(width: 144, height: 144)
+					.frame(width: sizeWidth, height: sizeWidth)
 			Spacer()
 			VStack(alignment: .leading){
 				HStack{
@@ -68,11 +67,12 @@ struct CustomTabelCell: View {
 				PricesWithButtomCard(text: model.price)
 			}
 			.frame(width: 199, height: 144)
+			
 			}
-		.frame(width: 375, height: 176)
+		//.frame(width: 375, height: 176)
+		.frame(maxWidth: .infinity, alignment: .leading)
 		}
 	}
-
 
 #Preview {
 	CustomTabelCell(model: ItemManager().fetchCell().first!)

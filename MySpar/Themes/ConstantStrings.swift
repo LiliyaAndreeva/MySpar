@@ -15,6 +15,8 @@ struct ConstantStrings {
 		static let cart = "Cart"
 		static let plus = "Plus"
 		static let minus = "Minus"
+		static let chips = "Chips"
+		static let frame = "Frame"
 	}
 	enum Pictures {
 		static let flag = "BadgeTempXS"

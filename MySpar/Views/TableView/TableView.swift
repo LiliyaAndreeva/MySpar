@@ -8,10 +8,35 @@
 import SwiftUI
 
 struct TableView: View {
+	@StateObject var viewModel: GridListViewModel
+	
+	init(itemManager: ItemManager = ItemManager()) {
+		_viewModel = StateObject(
+			wrappedValue: GridListViewModel(itemManager: itemManager)
+		)
+	}
+	
 	var body: some View {
-		/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
+//			List(viewModel.cellItems) { item in
+//				CustomTabelCell(model: item)
+//					
+//			}
+//			.listStyle(.plain)
+		//Divider()
+		VStack {
+			ScrollView{
+				ForEach(viewModel.cellItems) { item in
+					CustomTabelCell(model: item)
+					Divider()
+				}
+			}
+		}
+		
 	}
 }
+
+
+
 
 #Preview {
 	TableView()

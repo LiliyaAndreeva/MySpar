@@ -19,10 +19,7 @@ struct CustomGridItem: View {
 	var body: some View {
 		let sizeWidth = 168 * multipleWidth
 		let sizeHeight = 278 * multipleHeigth
-		let sizeSmallRectangleHeght = 64 * multipleHeigth
-		let sizeSmallRectangleWidth = 32 * multipleHeigth
-		
-		
+
 		VStack{
 			ZStack{
 				Rectangle()

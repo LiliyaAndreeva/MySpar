@@ -8,30 +8,26 @@
 import SwiftUI
 
 struct RectagleWithTwoIcons: View {
-//	let width: CGFloat
-//	let height: CGFloat
-//	
-
+	
+	
 	var body: some View {
-
-		ZStack{
-
-			VStack(spacing: 0){
-				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-					Image(ConstantStrings.Icons.checkIcon)
-						.resizable()
-						.scaledToFit()
-						.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-				})
-				.frame(width: 32, height: 32)
-				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-					Image(ConstantStrings.Icons.heardIcon)
-						.resizable()
-						.scaledToFit()
-						.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-				})
-				.frame(width: 32, height: 32)
-			}
+		VStack(spacing: 0){
+			Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+				Image(ConstantStrings.Icons.checkIcon)
+					.resizable()
+					.scaledToFit()
+					.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
+					.opacity(0.8)
+			})
+			.frame(width: 32, height: 32)
+			Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+				Image(ConstantStrings.Icons.heardIcon)
+					.resizable()
+					.scaledToFit()
+					.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
+					.opacity(0.8)
+			})
+			.frame(width: 32, height: 32)
 		}
 	}
 }

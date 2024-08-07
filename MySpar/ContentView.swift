@@ -8,10 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+	@State private var isFrame = false
 	
 	var body: some View {
 		VStack {
-			GridView()
+			NavigationStack {
+				VStack {
+					Divider()
+					if isFrame {
+						GridView()
+							.toolbar {
+								ToolbarItem(placement: .navigationBarLeading) {
+									ButtonList(isFrame: $isFrame)
+										.padding(.bottom, 5)
+								}
+							}
+					} else {
+						TableView()
+							.toolbar {
+								ToolbarItem(placement: .navigationBarLeading) {
+									ButtonList(isFrame: $isFrame)
+										.padding(.bottom, 5)
+								}
+							}
+					}
+				}
+			}
 		}
 	}
 }

@@ -30,6 +30,7 @@
 		7229A8542C6365540087715F /* DiscontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8532C6365540087715F /* DiscontLabel.swift */; };
 		7229A8562C6365880087715F /* FlagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8552C6365880087715F /* FlagLabel.swift */; };
 		7229A8582C6375190087715F /* PricesWithButtomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8572C6375190087715F /* PricesWithButtomCard.swift */; };
+		7229A85A2C63AF100087715F /* ButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8592C63AF100087715F /* ButtonList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		7229A8532C6365540087715F /* DiscontLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscontLabel.swift; sourceTree = "<group>"; };
 		7229A8552C6365880087715F /* FlagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagLabel.swift; sourceTree = "<group>"; };
 		7229A8572C6375190087715F /* PricesWithButtomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesWithButtomCard.swift; sourceTree = "<group>"; };
+		7229A8592C63AF100087715F /* ButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				7229A8472C622E000087715F /* ButtonCart.swift */,
 				7229A8532C6365540087715F /* DiscontLabel.swift */,
 				7229A84B2C6266BD0087715F /* PlusMinusButton.swift */,
+				7229A8592C63AF100087715F /* ButtonList.swift */,
 				7229A8432C6207A60087715F /* FlagFrame.swift */,
 			);
 			path = SubViews;
@@ -261,6 +264,7 @@
 				7229A82D2C60E9B40087715F /* GridView.swift in Sources */,
 				7229A8542C6365540087715F /* DiscontLabel.swift in Sources */,
 				7229A81F2C60E9880087715F /* MySparApp.swift in Sources */,
+				7229A85A2C63AF100087715F /* ButtonList.swift in Sources */,
 				7229A8422C61121C0087715F /* RectagleWithTwoIcons.swift in Sources */,
 				7229A8502C63611C0087715F /* CustomTabelCell.swift in Sources */,
 			);
