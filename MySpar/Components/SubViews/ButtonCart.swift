@@ -18,7 +18,7 @@ struct ButtonCart: View {
 				Rectangle()
 					.cornerRadius(Sizes.cornerRadius.sCornerRadius)
 					.frame(width: width, height: height)
-					.foregroundColor(.green)
+					.foregroundColor(.greenColor)
 				Image(ConstantStrings.Icons.cart)
 					.resizable()
 					.frame(width: Sizes.iconSizes.xsIconSize, height: Sizes.iconSizes.xsIconSize)

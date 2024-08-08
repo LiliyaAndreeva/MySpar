@@ -14,7 +14,7 @@ struct PlusMinusButton: View {
 		ZStack(alignment: .center){
 			RoundedRectangle(cornerRadius: Sizes.cornerRadius.sCornerRadius)
 				.frame(height: Sizes.iconSizes.height)
-				.foregroundColor(.green)
+				.foregroundColor(.greenColor)
 			  
 			HStack(alignment: .center, spacing: 20) {
 				Button(action: { minusAction ()}, label: {

@@ -26,12 +26,12 @@
 		7229A8502C63611C0087715F /* CustomTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A84F2C63611C0087715F /* CustomTabelCell.swift */; };
 		7229A8522C63651E0087715F /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8512C63651E0087715F /* Range.swift */; };
 		7229A8542C6365540087715F /* DiscontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8532C6365540087715F /* DiscontLabel.swift */; };
-		7229A8562C6365880087715F /* FlagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8552C6365880087715F /* FlagLabel.swift */; };
 		7229A8582C6375190087715F /* PricesWithButtomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8572C6375190087715F /* PricesWithButtomCard.swift */; };
 		7229A85A2C63AF100087715F /* ButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8592C63AF100087715F /* ButtonList.swift */; };
 		7229A85C2C64AF850087715F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A85B2C64AF850087715F /* ItemManager.swift */; };
 		7229A85E2C64B41F0087715F /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A85D2C64B41F0087715F /* CustomSwitch.swift */; };
 		7229A8602C64EEFF0087715F /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A85F2C64EEFF0087715F /* CustomDivider.swift */; };
+		7229A8622C6509670087715F /* Color+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8612C6509670087715F /* Color+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,12 +55,12 @@
 		7229A84F2C63611C0087715F /* CustomTabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabelCell.swift; sourceTree = "<group>"; };
 		7229A8512C63651E0087715F /* Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
 		7229A8532C6365540087715F /* DiscontLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscontLabel.swift; sourceTree = "<group>"; };
-		7229A8552C6365880087715F /* FlagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagLabel.swift; sourceTree = "<group>"; };
 		7229A8572C6375190087715F /* PricesWithButtomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesWithButtomCard.swift; sourceTree = "<group>"; };
 		7229A8592C63AF100087715F /* ButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonList.swift; sourceTree = "<group>"; };
 		7229A85B2C64AF850087715F /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		7229A85D2C64B41F0087715F /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		7229A85F2C64EEFF0087715F /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		7229A8612C6509670087715F /* Color+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				7229A83A2C60F6770087715F /* Sizes.swift */,
+				7229A8612C6509670087715F /* Color+Extention.swift */,
 				7229A83E2C60FE380087715F /* ConstantStrings.swift */,
 			);
 			path = Themes;
@@ -149,7 +150,6 @@
 				7229A8572C6375190087715F /* PricesWithButtomCard.swift */,
 				7229A85D2C64B41F0087715F /* CustomSwitch.swift */,
 				7229A8512C63651E0087715F /* Range.swift */,
-				7229A8552C6365880087715F /* FlagLabel.swift */,
 				7229A8472C622E000087715F /* ButtonCart.swift */,
 				7229A8532C6365540087715F /* DiscontLabel.swift */,
 				7229A84B2C6266BD0087715F /* PlusMinusButton.swift */,
@@ -248,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7229A8622C6509670087715F /* Color+Extention.swift in Sources */,
 				7229A84A2C6244B50087715F /* GridItemViewModel.swift in Sources */,
 				7229A83F2C60FE380087715F /* ConstantStrings.swift in Sources */,
 				7229A85E2C64B41F0087715F /* CustomSwitch.swift in Sources */,
@@ -258,7 +259,6 @@
 				7229A8602C64EEFF0087715F /* CustomDivider.swift in Sources */,
 				7229A83D2C60F8BF0087715F /* GridItemModel.swift in Sources */,
 				7229A8582C6375190087715F /* PricesWithButtomCard.swift in Sources */,
-				7229A8562C6365880087715F /* FlagLabel.swift in Sources */,
 				7229A85C2C64AF850087715F /* ItemManager.swift in Sources */,
 				7229A8462C62204B0087715F /* Prices.swift in Sources */,
 				7229A8382C60F4410087715F /* CustomGridItem.swift in Sources */,
