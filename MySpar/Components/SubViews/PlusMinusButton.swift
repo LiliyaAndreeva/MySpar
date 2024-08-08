@@ -22,9 +22,9 @@ struct PlusMinusButton: View {
 				})
 				
 				VStack(alignment: .center,spacing: 0){
-					Text("0.1 кг")
+					Text(ConstantStrings.Text.weight)
 						.font(.system(size: Sizes.fontSizes.mediumSize, weight: .bold))
-					Text("~ 120,0 ₽")
+					Text(ConstantStrings.Text.sum)
 						.opacity(Sizes.opacityValue.light)
 						.font(.system(size: Sizes.fontSizes.mSize))
 				}

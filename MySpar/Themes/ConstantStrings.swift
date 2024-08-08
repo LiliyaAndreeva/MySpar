@@ -48,6 +48,8 @@ struct ConstantStrings {
 		static let st = "Шт"
 		static let countryLabel = "Франция   🇫🇷"
 		static let discont = "25%"
+		static let weight = "0.1 кг"
+		static let sum = "~ 5,92 ₽"
 	}
 	
 }
