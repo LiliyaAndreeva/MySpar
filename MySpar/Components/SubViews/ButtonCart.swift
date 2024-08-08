@@ -11,19 +11,20 @@ struct ButtonCart: View {
 	let width: Double
 	let height: Double
 	let action: ()->Void
-    var body: some View {
-			Button(action: action) {
-				ZStack{
+
+	var body: some View {
+		Button(action: action) {
+			ZStack{
 				Rectangle()
-					.cornerRadius(40)
+					.cornerRadius(Sizes.cornerRadius.sCornerRadius)
 					.frame(width: width, height: height)
 					.foregroundColor(.green)
 				Image(ConstantStrings.Icons.cart)
 					.resizable()
-					.frame(width: Sizes.iconSizes.iconSize, height: Sizes.iconSizes.iconSize)
+					.frame(width: Sizes.iconSizes.xsIconSize, height: Sizes.iconSizes.xsIconSize)
 			}
 		}
-    }
+	}
 }
 
 #Preview {

@@ -13,19 +13,19 @@ struct PlusMinusButton: View {
     var body: some View {
 		ZStack(alignment: .center){
 			RoundedRectangle(cornerRadius: Sizes.cornerRadius.sCornerRadius)
-				.frame(height: 36)
+				.frame(height: Sizes.iconSizes.height)
 				.foregroundColor(.green)
 			  
-			HStack(alignment: .center, spacing: 20  ) {
+			HStack(alignment: .center, spacing: 20) {
 				Button(action: { minusAction ()}, label: {
 					Image(ConstantStrings.Icons.minus)
 				})
 				
 				VStack(alignment: .center,spacing: 0){
 					Text("0.1 кг")
-						.font(.system(size: 17, weight: .bold))
+						.font(.system(size: Sizes.fontSizes.mediumSize, weight: .bold))
 					Text("~ 120,0 ₽")
-						.opacity(0.8)
+						.opacity(Sizes.opacityValue.light)
 						.font(.system(size: Sizes.fontSizes.mSize))
 				}
 				.foregroundColor(.white)
@@ -38,5 +38,5 @@ struct PlusMinusButton: View {
 }
 
 #Preview {
-	PlusMinusButton(minusAction: {}/*, size: 160*/)
+	PlusMinusButton(minusAction: {})
 }

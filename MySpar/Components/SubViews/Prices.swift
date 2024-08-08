@@ -14,10 +14,9 @@ struct Prices: View {
 			Text(text)
 				.font(.title2)
 			VStack{
-				Text("90")
+				Text(ConstantStrings.Text.cop2)
 					.font(.footnote)
-
-			}.padding(.bottom, 6)
+			}.padding(.bottom, 7)
 			Image(ConstantStrings.Icons.price)
 				.resizable()
 				.frame(width: UIFont.preferredFont(forTextStyle: .title2).pointSize,

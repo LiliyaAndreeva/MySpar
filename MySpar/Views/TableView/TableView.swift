@@ -21,14 +21,16 @@ struct TableView: View {
 			ScrollView{
 				ForEach(viewModel.cellItems) { item in
 					CustomTabelCell(model: item)
-					Divider()
+					CustomDivider() 
+				
 				}
 			}
 		}
-		
 	}
 }
 
 #Preview {
 	TableView()
 }
+
+

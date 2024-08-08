@@ -17,10 +17,9 @@ struct PricesWithButtomCard: View {
 				Text(ConstantStrings.Text.cop)
 					.strikethrough()
 					.foregroundStyle(.gray)
-					.frame(width: 67, height: 14, alignment: .leading)
 			}
 			Spacer()
-			ButtonCart(width: 48, height: 36, action: { action() })
+			ButtonCart(width: Sizes.iconSizes.width, height: Sizes.iconSizes.height, action: { action() })
 		}
     }
 }

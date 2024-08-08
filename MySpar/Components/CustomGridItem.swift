@@ -7,24 +7,21 @@
 
 import SwiftUI
 struct CustomGridItem: View {
-	
 	let model: GridItemModel
-	
-	@State private var isHeartFilled = false //!!!
+
 	@State private var isPlusMinusShown = false
-	
+	@State private var isSwitchShown = Bool.random()
+
 	let multipleWidth = Sizes.width / 375
 	let multipleHeigth = Sizes.height / 800
-	
-	
+
 	var body: some View {
 		let sizeWidth = 168 * multipleWidth
 		let sizeHeight = 278 * multipleHeigth
-		
+
 		VStack{
 			ZStack{
 				Rectangle()
-					.frame(width: sizeWidth, height: sizeHeight)
 					.foregroundColor(.white)
 					.cornerRadius(Sizes.cornerRadius.xsCornerRadius)
 					.shadow(
@@ -54,42 +51,45 @@ struct CustomGridItem: View {
 								Range()
 								Spacer()
 								DiscontLabel(text: model.discountLabel)
+								
 							}
-							.padding([.leading, .trailing], 5)
+							.padding([.leading, .trailing], Sizes.padding)
 						}
-						.frame(width: sizeWidth, height: sizeWidth)
 					}
-					Spacer()
-					VStack{
-						HStack{
-							VStack(alignment: .leading, spacing: 10) {
-								Text(model.title)
-									.font(.system(size: Sizes.fontSizes.sSize))
+					ZStack(alignment: .topLeading) {
+						VStack(alignment: .leading) {
+							Text(model.title)
+								.font(.system(size: Sizes.fontSizes.sSize))
+								.multilineTextAlignment(.leading)
+								.lineLimit(2)
+							Spacer()
+							ZStack {
 								Text(model.countryLabel)
 									.foregroundStyle(.gray)
 									.font(.system(size: Sizes.fontSizes.sSize))
+									.opacity(isPlusMinusShown && isSwitchShown ? 0 : 1)
+									.zIndex(1)
+								if isPlusMinusShown && isSwitchShown {
+									CustomSwitch()
+										.zIndex(2)
+								}
 							}
-							Spacer()
-						}
-						Spacer()
-						ZStack{
-							PricesWithButtomCard(text: model.price) {
-								isPlusMinusShown.toggle()
-							}
-							.opacity(isPlusMinusShown ? 0 : 1)
-							.frame(alignment: .bottom)
-							if isPlusMinusShown {
-								VStack(){
-									if Bool.random() {
-										CustomSwitch()
-									}
+
+							ZStack {
+								PricesWithButtomCard(text: model.price) {
+									isPlusMinusShown.toggle()
+								}
+								.opacity(isPlusMinusShown ? 0 : 1)
+								.frame(alignment: .bottom)
+								if isPlusMinusShown {
 									PlusMinusButton(minusAction: {
 										isPlusMinusShown.toggle()
 									})
 								}
 							}
 						}
-					}.padding([.leading, .trailing, .bottom], 5)
+						.padding([.leading, .trailing, .bottom], Sizes.padding)
+					}
 				}
 			}
 		}
@@ -100,3 +100,4 @@ struct CustomGridItem: View {
 #Preview {
 	CustomGridItem(model: ItemManager().fetchCell().first!)
 }
+

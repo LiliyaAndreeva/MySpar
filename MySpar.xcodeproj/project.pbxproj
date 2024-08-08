@@ -13,8 +13,6 @@
 		7229A8262C60E98A0087715F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7229A8252C60E98A0087715F /* Preview Assets.xcassets */; };
 		7229A82D2C60E9B40087715F /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A82C2C60E9B40087715F /* GridView.swift */; };
 		7229A82F2C60E9C60087715F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A82E2C60E9C60087715F /* TableView.swift */; };
-		7229A8342C60EA230087715F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8332C60EA230087715F /* ViewModel.swift */; };
-		7229A8362C60EDDE0087715F /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8352C60EDDE0087715F /* MainModel.swift */; };
 		7229A8382C60F4410087715F /* CustomGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8372C60F4410087715F /* CustomGridItem.swift */; };
 		7229A83B2C60F6770087715F /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A83A2C60F6770087715F /* Sizes.swift */; };
 		7229A83D2C60F8BF0087715F /* GridItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A83C2C60F8BF0087715F /* GridItemModel.swift */; };
@@ -33,6 +31,7 @@
 		7229A85A2C63AF100087715F /* ButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A8592C63AF100087715F /* ButtonList.swift */; };
 		7229A85C2C64AF850087715F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A85B2C64AF850087715F /* ItemManager.swift */; };
 		7229A85E2C64B41F0087715F /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A85D2C64B41F0087715F /* CustomSwitch.swift */; };
+		7229A8602C64EEFF0087715F /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7229A85F2C64EEFF0087715F /* CustomDivider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +42,6 @@
 		7229A8252C60E98A0087715F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7229A82C2C60E9B40087715F /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		7229A82E2C60E9C60087715F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		7229A8332C60EA230087715F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		7229A8352C60EDDE0087715F /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		7229A8372C60F4410087715F /* CustomGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGridItem.swift; sourceTree = "<group>"; };
 		7229A83A2C60F6770087715F /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		7229A83C2C60F8BF0087715F /* GridItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemModel.swift; sourceTree = "<group>"; };
@@ -63,6 +60,7 @@
 		7229A8592C63AF100087715F /* ButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonList.swift; sourceTree = "<group>"; };
 		7229A85B2C64AF850087715F /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		7229A85D2C64B41F0087715F /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		7229A85F2C64EEFF0087715F /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				7229A8412C61121C0087715F /* RectagleWithTwoIcons.swift */,
+				7229A85F2C64EEFF0087715F /* CustomDivider.swift */,
 				7229A8452C62204B0087715F /* Prices.swift */,
 				7229A8572C6375190087715F /* PricesWithButtomCard.swift */,
 				7229A85D2C64B41F0087715F /* CustomSwitch.swift */,
@@ -174,8 +173,6 @@
 		7229A84E2C628AD10087715F /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				7229A8332C60EA230087715F /* ViewModel.swift */,
-				7229A8352C60EDDE0087715F /* MainModel.swift */,
 				7229A82E2C60E9C60087715F /* TableView.swift */,
 			);
 			path = TableView;
@@ -254,15 +251,14 @@
 				7229A84A2C6244B50087715F /* GridItemViewModel.swift in Sources */,
 				7229A83F2C60FE380087715F /* ConstantStrings.swift in Sources */,
 				7229A85E2C64B41F0087715F /* CustomSwitch.swift in Sources */,
-				7229A8342C60EA230087715F /* ViewModel.swift in Sources */,
 				7229A8522C63651E0087715F /* Range.swift in Sources */,
 				7229A8212C60E9880087715F /* ContentView.swift in Sources */,
 				7229A8482C622E000087715F /* ButtonCart.swift in Sources */,
 				7229A8442C6207A60087715F /* FlagFrame.swift in Sources */,
+				7229A8602C64EEFF0087715F /* CustomDivider.swift in Sources */,
 				7229A83D2C60F8BF0087715F /* GridItemModel.swift in Sources */,
 				7229A8582C6375190087715F /* PricesWithButtomCard.swift in Sources */,
 				7229A8562C6365880087715F /* FlagLabel.swift in Sources */,
-				7229A8362C60EDDE0087715F /* MainModel.swift in Sources */,
 				7229A85C2C64AF850087715F /* ItemManager.swift in Sources */,
 				7229A8462C62204B0087715F /* Prices.swift in Sources */,
 				7229A8382C60F4410087715F /* CustomGridItem.swift in Sources */,

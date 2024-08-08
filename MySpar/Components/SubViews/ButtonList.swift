@@ -22,13 +22,13 @@ struct ButtonList: View {
 						height: Sizes.cornerRadius.xxsCornerRadius
 					)
 				)
-					.frame(width: 40, height: 40)
+					.frame(width: Sizes.frameSizes.lsIcon, height: Sizes.frameSizes.lsIcon)
 					.foregroundStyle(.gray)
-					.opacity(0.6)
+					.opacity(Sizes.opacityValue.hard)
 				Image(isFrame ? ConstantStrings.Icons.frame : ConstantStrings.Icons.chips)
 					.resizable()
 					.scaledToFit()
-					.frame(width: 18, height: 18)
+					.frame(width: Sizes.frameSizes.sIcon, height: Sizes.frameSizes.sIcon)
 			}
 		}
 	}

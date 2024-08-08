@@ -43,6 +43,11 @@ struct ConstantStrings {
 		static let rangeText = "4.1"
 		static let fidback = " | 19 отзывов"
 		static let cop = "199"
+		static let cop2 = "90"
+		static let kg = "Кг"
+		static let st = "Шт"
+		static let countryLabel = "Франция   🇫🇷"
+		static let discont = "25%"
 	}
 	
 }

@@ -29,7 +29,7 @@ final class ItemManager {
 	// MARK: - Public methods
 	func fetchCell() -> [GridItemModel] {
 
-		for _ in 0..<17 {
+		for _ in 0..<20 {
 			let randomImage = ItemManager.productImages.randomElement()!
 			let randomTitle = ItemManager.titles.randomElement()!
 			let randomPrice = Int.random(in: 99..<2600)
@@ -38,10 +38,10 @@ final class ItemManager {
 			let item = GridItemModel(
 				productImage: randomImage,
 				title: randomTitle,
-				price: "\(randomPrice)", // Генерируем случайную цену
+				price: "\(randomPrice)",
 				flagLabel: Bool.random() ? randomFlag : nil,
-				discountLabel:  Bool.random() ? "25%" : "",
-				countryLabel:  Bool.random() ? "Франция   🇫🇷" : ""
+				discountLabel: Bool.random() ? ConstantStrings.Text.discont : "",
+				countryLabel: Bool.random() ? ConstantStrings.Text.countryLabel : ""
 			)
 			cellItems.append(item)
 		}

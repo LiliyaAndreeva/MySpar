@@ -9,86 +9,86 @@ import SwiftUI
 
 struct CustomTabelCell: View {
 	@State private var isPlusMinusShown = false
+	@State private var isSwitchShown = Bool.random()
 	
 	let model: GridItemModel
 	let multipleWidth = Sizes.width / 375
 	let multipleHeigth = Sizes.height / 800
-	
-	
+
 	var body: some View {
 		let sizeWidth = 144 * multipleWidth
+		let sizeHeight = 144 * multipleHeigth
 		HStack {
-					VStack {
-						ZStack {
-							Image(model.productImage)
-								.resizable()
-								.scaledToFit()
-								.frame(width: sizeWidth, height: sizeWidth)
-								.cornerRadius(Sizes.cornerRadius.xsCornerRadius)
-							VStack{
-								HStack{
-									if let flagImage = model.flagLabel {
-										Image(flagImage)
-											.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius.xsCornerRadius))
-									}
-									Spacer()
-								}
-								Spacer()
-								HStack(){
-									//Text("")
-									Spacer()
-									DiscontLabel(text: model.discountLabel)
-										//.frame(maxWidth: .infinity, alignment: .trailing)
-								}
-							
+			VStack {
+				ZStack {
+					Image(model.productImage)
+						.resizable()
+						.scaledToFit()
+						.frame(width: sizeWidth, height: sizeWidth)
+						.cornerRadius(Sizes.cornerRadius.xsCornerRadius)
+					VStack{
+						HStack{
+							if let flagImage = model.flagLabel {
+								Image(flagImage)
+									.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius.xsCornerRadius))
 							}
+							Spacer()
+						}
+						Spacer()
+						HStack(){
+							Spacer()
+							DiscontLabel(text: model.discountLabel)
 						}
 					}
-					.frame(width: sizeWidth, height: sizeWidth)
+				}
+			}
+			.frame(width: sizeWidth, height: sizeWidth)
 			Spacer()
 			VStack(alignment: .leading){
-				HStack{
+				HStack(alignment: .top){
 					VStack(alignment: .leading){
 						HStack(spacing: 0){
 							Range()
 							Text(ConstantStrings.Text.fidback)
-								.font(.system(size: 12))
+								.font(.system(size: Sizes.fontSizes.sSize))
 								.foregroundStyle(.gray)
 						}
 						Text(model.title)
-							.font(.system(size: 12))
+							.font(.system(size: Sizes.fontSizes.sSize))
 						Text(model.countryLabel)
 							.foregroundStyle(.gray)
-							.font(.system(size: 10))
+							.font(.system(size: Sizes.fontSizes.sSize))
 					}
 					Spacer()
 					RectagleWithTwoIcons()
 				}
-				Spacer()
 				ZStack{
-					PricesWithButtomCard(text: model.price) {
-						isPlusMinusShown.toggle()
-					}
-					.opacity(isPlusMinusShown ? 0 : 1)
-					.frame(alignment: .bottom)
-					if isPlusMinusShown {
-						VStack(){
-							if Bool.random() {
-								CustomSwitch()
-							}
-							PlusMinusButton(minusAction: {
+					VStack(alignment: .leading){
+						Spacer()
+						if isPlusMinusShown && isSwitchShown {
+							CustomSwitch()
+						}
+						Spacer()
+						ZStack {
+							PricesWithButtomCard(text: model.price) {
 								isPlusMinusShown.toggle()
-							})
-						} 
+							}
+							.opacity(isPlusMinusShown ? 0 : 1)
+							.frame(alignment: .bottom)
+							if isPlusMinusShown  {
+								PlusMinusButton(minusAction: {
+									isPlusMinusShown.toggle()
+								})
+							}
+						}
+					}
 				}
 			}
-			}
-			.frame(width: 199, height: 144)
-			
-			}
-		.frame(maxWidth: .infinity, alignment: .leading)
+			.frame(width: 199 * multipleWidth, height: sizeHeight)
 		}
+		.frame(maxWidth: .infinity, alignment: .leading)
 	}
+}
 
 #Preview {
 	CustomTabelCell(model: ItemManager().fetchCell().first!)

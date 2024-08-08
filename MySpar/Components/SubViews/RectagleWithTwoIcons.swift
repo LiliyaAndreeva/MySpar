@@ -15,18 +15,18 @@ struct RectagleWithTwoIcons: View {
 				Image(ConstantStrings.Icons.checkIcon)
 					.resizable()
 					.scaledToFit()
-					.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-					.opacity(0.8)
+					.frame(width: Sizes.iconSizes.mIconSize, height: Sizes.iconSizes.mIconSize)
+					.opacity(Sizes.opacityValue.light)
 			})
-			.frame(width: 32, height: 32)
+			.frame(width: Sizes.iconSizes.lIconSize, height: Sizes.iconSizes.lIconSize)
 			Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
 				Image(ConstantStrings.Icons.heardIcon)
 					.resizable()
 					.scaledToFit()
-					.frame(width: Sizes.iconSizes.size, height: Sizes.iconSizes.size)
-					.opacity(0.8)
+					.frame(width: Sizes.iconSizes.mIconSize, height: Sizes.iconSizes.mIconSize)
+					.opacity(Sizes.opacityValue.light)
 			})
-			.frame(width: 32, height: 32)
+			.frame(width: Sizes.iconSizes.lIconSize, height: Sizes.iconSizes.lIconSize)
 		}
 	}
 }

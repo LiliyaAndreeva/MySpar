@@ -13,14 +13,14 @@ struct ContentView: View {
 	var body: some View {
 		VStack {
 			NavigationStack {
-				VStack {  
-					Divider()
+				VStack {   
+					CustomDivider()
 					if isFrame {
 						GridView()
 							.toolbar {
 								ToolbarItem(placement: .navigationBarLeading) {
 									ButtonList(isFrame: $isFrame)
-										.padding(.bottom, 5)
+										.padding(.bottom, Sizes.padding)
 								}
 							}
 					} else {
@@ -28,7 +28,7 @@ struct ContentView: View {
 							.toolbar {
 								ToolbarItem(placement: .navigationBarLeading) {
 									ButtonList(isFrame: $isFrame)
-										.padding(.bottom, 5)
+										.padding(.bottom, Sizes.padding)
 								}
 							}
 					}

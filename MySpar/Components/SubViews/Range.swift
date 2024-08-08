@@ -14,7 +14,6 @@ struct Range: View {
 			Text(ConstantStrings.Text.rangeText)
 				.font(.system(size: Sizes.fontSizes.sSize))
 		}
-		.frame(height: 20)
 	}
 }
 

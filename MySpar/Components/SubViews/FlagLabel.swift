@@ -17,7 +17,7 @@ struct FlagLabel: View {
 			
 			Image(ConstantStrings.Pictures.franceFlag)
 				.resizable()
-				.frame(width: Sizes.iconSizes.iconSize,height: Sizes.iconSizes.iconSize)
+				.frame(width: Sizes.iconSizes.xsIconSize,height: Sizes.iconSizes.xsIconSize)
 		}
 	}
 }

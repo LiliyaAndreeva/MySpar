@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CustomSwitch: View {
-	@State private var selectedUnit = "Кг"
+	@State private var selectedUnit = ConstantStrings.Text.kg
 		
-		let units = ["Кг", "Шт"]
+	let units = [ConstantStrings.Text.kg,ConstantStrings.Text.st]
 		
 		var body: some View {
 			VStack {
