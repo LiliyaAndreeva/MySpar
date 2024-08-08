@@ -12,7 +12,7 @@ struct Range: View {
 		HStack(spacing: 3) {
 			Image(ConstantStrings.Icons.star)
 			Text(ConstantStrings.Text.rangeText)
-				.font(.system(size: 12))
+				.font(.system(size: Sizes.fontSizes.sSize))
 		}
 		.frame(height: 20)
 	}

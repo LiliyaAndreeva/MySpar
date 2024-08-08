@@ -9,21 +9,22 @@ import SwiftUI
 
 struct PricesWithButtomCard: View {
 	let text: String
+	let action: () -> Void
     var body: some View {
 		HStack{
-			VStack(spacing: 0){
+			VStack(alignment: .leading, spacing: 0){
 				Prices(text: text)
-				Text("199")
+				Text(ConstantStrings.Text.cop)
 					.strikethrough()
 					.foregroundStyle(.gray)
 					.frame(width: 67, height: 14, alignment: .leading)
 			}
 			Spacer()
-			ButtonCart(width: 48, height: 36, action: {})
+			ButtonCart(width: 48, height: 36, action: { action() })
 		}
     }
 }
 
 #Preview {
-    PricesWithButtomCard(text: "256")
+	PricesWithButtomCard(text: "256", action: {})
 }

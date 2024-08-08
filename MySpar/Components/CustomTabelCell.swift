@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CustomTabelCell: View {
-	let model: GridItemModel
+	@State private var isPlusMinusShown = false
 	
+	let model: GridItemModel
 	let multipleWidth = Sizes.width / 375
 	let multipleHeigth = Sizes.height / 800
 	
@@ -23,12 +24,12 @@ struct CustomTabelCell: View {
 								.resizable()
 								.scaledToFit()
 								.frame(width: sizeWidth, height: sizeWidth)
-								.cornerRadius(Sizes.cornerRadius)
+								.cornerRadius(Sizes.cornerRadius.xsCornerRadius)
 							VStack{
 								HStack{
 									if let flagImage = model.flagLabel {
 										Image(flagImage)
-											.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius))
+											.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius.xsCornerRadius))
 									}
 									Spacer()
 								}
@@ -64,12 +65,27 @@ struct CustomTabelCell: View {
 					RectagleWithTwoIcons()
 				}
 				Spacer()
-				PricesWithButtomCard(text: model.price)
+				ZStack{
+					PricesWithButtomCard(text: model.price) {
+						isPlusMinusShown.toggle()
+					}
+					.opacity(isPlusMinusShown ? 0 : 1)
+					.frame(alignment: .bottom)
+					if isPlusMinusShown {
+						VStack(){
+							if Bool.random() {
+								CustomSwitch()
+							}
+							PlusMinusButton(minusAction: {
+								isPlusMinusShown.toggle()
+							})
+						} 
+				}
+			}
 			}
 			.frame(width: 199, height: 144)
 			
 			}
-		//.frame(width: 375, height: 176)
 		.frame(maxWidth: .infinity, alignment: .leading)
 		}
 	}

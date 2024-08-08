@@ -8,30 +8,35 @@
 import SwiftUI
 
 struct PlusMinusButton: View {
-	
-	let size: Double
+	let minusAction: () -> Void
+
     var body: some View {
 		ZStack(alignment: .center){
-			RoundedRectangle(cornerRadius: 40)
-				.frame(width: size, height: 36)
+			RoundedRectangle(cornerRadius: Sizes.cornerRadius.sCornerRadius)
+				.frame(height: 36)
 				.foregroundColor(.green)
 			  
 			HStack(alignment: .center, spacing: 20  ) {
-				Image(ConstantStrings.Icons.minus)
+				Button(action: { minusAction ()}, label: {
+					Image(ConstantStrings.Icons.minus)
+				})
+				
 				VStack(alignment: .center,spacing: 0){
 					Text("0.1 кг")
 						.font(.system(size: 17, weight: .bold))
 					Text("~ 120,0 ₽")
 						.opacity(0.8)
-						.font(.system(size: 14))
+						.font(.system(size: Sizes.fontSizes.mSize))
 				}
 				.foregroundColor(.white)
-				Image(ConstantStrings.Icons.plus)
+				Button(action: { minusAction ()}, label: {
+					Image(ConstantStrings.Icons.plus)
+				})
 			}
 		}
     }
 }
 
 #Preview {
-	PlusMinusButton(size: 160)
+	PlusMinusButton(minusAction: {}/*, size: 160*/)
 }

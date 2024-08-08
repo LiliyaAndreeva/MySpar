@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-	@State private var isFrame = false
+	@State private var isFrame = true
 	
 	var body: some View {
 		VStack {
 			NavigationStack {
-				VStack {
+				VStack {  
 					Divider()
 					if isFrame {
 						GridView()

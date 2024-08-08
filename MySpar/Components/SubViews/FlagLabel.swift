@@ -13,7 +13,7 @@ struct FlagLabel: View {
 		HStack{
 			Text(text)
 				.foregroundStyle(.gray)
-				.font(.system(size: 9))
+				.font(.system(size: Sizes.fontSizes.xsSize))
 			
 			Image(ConstantStrings.Pictures.franceFlag)
 				.resizable()

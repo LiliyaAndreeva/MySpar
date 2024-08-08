@@ -11,6 +11,7 @@ struct CustomGridItem: View {
 	let model: GridItemModel
 	
 	@State private var isHeartFilled = false //!!!
+	@State private var isPlusMinusShown = false
 	
 	let multipleWidth = Sizes.width / 375
 	let multipleHeigth = Sizes.height / 800
@@ -19,15 +20,15 @@ struct CustomGridItem: View {
 	var body: some View {
 		let sizeWidth = 168 * multipleWidth
 		let sizeHeight = 278 * multipleHeigth
-
+		
 		VStack{
 			ZStack{
 				Rectangle()
 					.frame(width: sizeWidth, height: sizeHeight)
 					.foregroundColor(.white)
-					.cornerRadius(Sizes.cornerRadius)
+					.cornerRadius(Sizes.cornerRadius.xsCornerRadius)
 					.shadow(
-						color: .gray,
+						color: .gray.opacity(0.2),
 						radius: Sizes.shadowSizes,
 						x: Sizes.shadowSizes,
 						y: Sizes.shadowSizes
@@ -38,12 +39,12 @@ struct CustomGridItem: View {
 							.resizable()
 							.scaledToFit()
 							.frame(width: sizeWidth, height: sizeWidth)
-							.cornerRadius(Sizes.cornerRadius)
+							.cornerRadius(Sizes.cornerRadius.xsCornerRadius)
 						VStack(){
 							HStack(alignment: .top){
 								if let flagImage = model.flagLabel {
 									Image(flagImage)
-										.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius))
+										.clipShape(FlagFrame(sizeOfRadius: Sizes.cornerRadius.xsCornerRadius))
 								}
 								Spacer()
 								RectagleWithTwoIcons()
@@ -63,40 +64,38 @@ struct CustomGridItem: View {
 						HStack{
 							VStack(alignment: .leading, spacing: 10) {
 								Text(model.title)
-									.font(.system(size: 12))
-								
+									.font(.system(size: Sizes.fontSizes.sSize))
 								Text(model.countryLabel)
 									.foregroundStyle(.gray)
-									.font(.system(size: 10))
-								
+									.font(.system(size: Sizes.fontSizes.sSize))
 							}
 							Spacer()
 						}
 						Spacer()
-						HStack {
-							VStack(alignment: .leading, spacing: 0){
-								Prices(text: model.price)
-								Text("199")
-									.strikethrough()
-									.foregroundStyle(.gray)
-									.frame(width: 67, height: 14, alignment: .leading)
-								
+						ZStack{
+							PricesWithButtomCard(text: model.price) {
+								isPlusMinusShown.toggle()
 							}
-							Spacer()
-							ButtonCart(width: 48, height: 36, action: {})
+							.opacity(isPlusMinusShown ? 0 : 1)
+							.frame(alignment: .bottom)
+							if isPlusMinusShown {
+								VStack(){
+									if Bool.random() {
+										CustomSwitch()
+									}
+									PlusMinusButton(minusAction: {
+										isPlusMinusShown.toggle()
+									})
+								}
+							}
 						}
 					}.padding([.leading, .trailing, .bottom], 5)
 				}
 			}
 		}
 		.frame(width: sizeWidth, height: sizeHeight)
-		
 	}
 }
-
-
-
-
 
 #Preview {
 	CustomGridItem(model: ItemManager().fetchCell().first!)

@@ -16,7 +16,12 @@ struct ButtonList: View {
 
 		}) {
 			ZStack{
-				RoundedRectangle(cornerSize: CGSize(width: 12, height: 12))
+				RoundedRectangle(
+					cornerSize: CGSize(
+						width: Sizes.cornerRadius.xxsCornerRadius,
+						height: Sizes.cornerRadius.xxsCornerRadius
+					)
+				)
 					.frame(width: 40, height: 40)
 					.foregroundStyle(.gray)
 					.opacity(0.6)

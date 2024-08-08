@@ -9,20 +9,14 @@ import SwiftUI
 
 struct TableView: View {
 	@StateObject var viewModel: GridListViewModel
-	
+
 	init(itemManager: ItemManager = ItemManager()) {
 		_viewModel = StateObject(
 			wrappedValue: GridListViewModel(itemManager: itemManager)
 		)
 	}
-	
+
 	var body: some View {
-//			List(viewModel.cellItems) { item in
-//				CustomTabelCell(model: item)
-//					
-//			}
-//			.listStyle(.plain)
-		//Divider()
 		VStack {
 			ScrollView{
 				ForEach(viewModel.cellItems) { item in
@@ -34,9 +28,6 @@ struct TableView: View {
 		
 	}
 }
-
-
-
 
 #Preview {
 	TableView()

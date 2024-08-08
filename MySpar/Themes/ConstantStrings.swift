@@ -42,6 +42,7 @@ struct ConstantStrings {
 	enum Text {
 		static let rangeText = "4.1"
 		static let fidback = " | 19 отзывов"
+		static let cop = "199"
 	}
 	
 }

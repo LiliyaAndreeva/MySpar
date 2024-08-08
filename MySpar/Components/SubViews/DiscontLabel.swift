@@ -12,7 +12,7 @@ struct DiscontLabel: View {
 	var body: some View {
 		Text(text)
 			.foregroundStyle(.red)
-			.font(.system(size: 16))
+			.font(.system(size: Sizes.fontSizes.normalSize))
 			.fontWeight(.semibold)
 	}
 }

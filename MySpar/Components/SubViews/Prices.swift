@@ -23,7 +23,7 @@ struct Prices: View {
 				.frame(width: UIFont.preferredFont(forTextStyle: .title2).pointSize,
 					   height: UIFont.preferredFont(forTextStyle: .title2).pointSize)
 		}
-		.frame(/*width: 96,height: 22, */alignment: .leading)
+		.frame(alignment: .leading)
 
 		
 	}

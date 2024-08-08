@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct RectagleWithTwoIcons: View {
-	
-	
+
 	var body: some View {
 		VStack(spacing: 0){
 			Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
